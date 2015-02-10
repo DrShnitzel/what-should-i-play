@@ -3,6 +3,16 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:steam] = OmniAuth::AuthHash.new(
+      provider: 'steam',
+      uid: '1234',
+      name: 'Тест Тестерович',
+      nickname: 'TheTestingGuy',
+      image: 'http://png-1.findicons.com/files/icons/1072/face_avatars/300/i04.png'
+  )
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
