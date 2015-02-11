@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/recommendations'
+
   root 'home#index'
   get 'home/index'
 
