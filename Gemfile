@@ -29,6 +29,7 @@ gem 'puma'
 gem 'dotenv-rails'
 gem 'httpclient'
 gem 'pry-rails'
+gem 'uglifier'
 
 # Auth
 gem 'devise'
