@@ -3,8 +3,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def steam
     @user = User.from_omniauth(request.env['omniauth.auth'])
-    render json: request.env['omniauth.auth']
-    # @user ? success : failure
+    @user ? success : failure
   end
 
   def success
