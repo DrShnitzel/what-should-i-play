@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.name = auth.name
-      user.nickname = auth.nickname
-      user.avatar = auth.image
+      user.name = auth.info.name
+      user.nickname = auth.info.nickname
+      user.avatar = auth.info.image
     end
   end
 end
