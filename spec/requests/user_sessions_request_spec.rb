@@ -6,6 +6,6 @@ RSpec.describe 'GET /users/auth/steam/', type: :request do
   end
 
   it 'should get data from omniauth' do
-    expect(page).to have_content('uid')
+    expect(page).to have_content('Cogs')
   end
 end
